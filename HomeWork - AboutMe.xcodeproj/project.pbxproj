@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		68DDEFD129DBF4DB00E107BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DDEFD029DBF4DB00E107BB /* AppDelegate.swift */; };
 		68DDEFD329DBF4DB00E107BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DDEFD229DBF4DB00E107BB /* SceneDelegate.swift */; };
-		68DDEFD529DBF4DB00E107BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DDEFD429DBF4DB00E107BB /* ViewController.swift */; };
+		68DDEFD529DBF4DB00E107BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DDEFD429DBF4DB00E107BB /* LoginViewController.swift */; };
 		68DDEFD829DBF4DB00E107BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68DDEFD629DBF4DB00E107BB /* Main.storyboard */; };
 		68DDEFDA29DBF4DD00E107BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68DDEFD929DBF4DD00E107BB /* Assets.xcassets */; };
 		68DDEFDD29DBF4DD00E107BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68DDEFDB29DBF4DD00E107BB /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		68DDEFCD29DBF4DB00E107BB /* HomeWork - AboutMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HomeWork - AboutMe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68DDEFD029DBF4DB00E107BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68DDEFD229DBF4DB00E107BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		68DDEFD429DBF4DB00E107BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		68DDEFD429DBF4DB00E107BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		68DDEFD729DBF4DB00E107BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68DDEFD929DBF4DD00E107BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68DDEFDC29DBF4DD00E107BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,47 @@
 		68DDEFCF29DBF4DB00E107BB /* HomeWork - AboutMe */ = {
 			isa = PBXGroup;
 			children = (
-				68DDEFD029DBF4DB00E107BB /* AppDelegate.swift */,
-				68DDEFD229DBF4DB00E107BB /* SceneDelegate.swift */,
-				68DDEFD429DBF4DB00E107BB /* ViewController.swift */,
-				68DDEFD629DBF4DB00E107BB /* Main.storyboard */,
+				68DDEFE729DBFA2700E107BB /* Models */,
+				68DDEFE529DBF51600E107BB /* ViewControllers */,
+				68DDEFE629DBF52D00E107BB /* Storyboards */,
+				68DDEFE429DBF50B00E107BB /* App */,
 				68DDEFD929DBF4DD00E107BB /* Assets.xcassets */,
-				68DDEFDB29DBF4DD00E107BB /* LaunchScreen.storyboard */,
-				68DDEFDE29DBF4DD00E107BB /* Info.plist */,
 			);
 			path = "HomeWork - AboutMe";
+			sourceTree = "<group>";
+		};
+		68DDEFE429DBF50B00E107BB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				68DDEFD029DBF4DB00E107BB /* AppDelegate.swift */,
+				68DDEFD229DBF4DB00E107BB /* SceneDelegate.swift */,
+				68DDEFDE29DBF4DD00E107BB /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		68DDEFE529DBF51600E107BB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				68DDEFD429DBF4DB00E107BB /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		68DDEFE629DBF52D00E107BB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				68DDEFD629DBF4DB00E107BB /* Main.storyboard */,
+				68DDEFDB29DBF4DD00E107BB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		68DDEFE729DBFA2700E107BB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68DDEFD529DBF4DB00E107BB /* ViewController.swift in Sources */,
+				68DDEFD529DBF4DB00E107BB /* LoginViewController.swift in Sources */,
 				68DDEFD129DBF4DB00E107BB /* AppDelegate.swift in Sources */,
 				68DDEFD329DBF4DB00E107BB /* SceneDelegate.swift in Sources */,
 			);
@@ -288,12 +320,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HomeWork - AboutMe/Info.plist";
+				INFOPLIST_FILE = "HomeWork - AboutMe/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,9 +334,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Vitaliy-Sabin.HomeWork---AboutMe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,12 +351,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HomeWork - AboutMe/Info.plist";
+				INFOPLIST_FILE = "HomeWork - AboutMe/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,9 +365,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Vitaliy-Sabin.HomeWork---AboutMe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
