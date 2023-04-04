@@ -10,13 +10,9 @@ struct User {
     let password: String
     
     static func getUser() -> User {
-        let user = User(username: "Alexey", password: "1111")
-        return user
+        User(username: "Alexey", password: "1111")
     }
 }
-
-
-
 
 struct Person {
     let name: String
@@ -32,7 +28,7 @@ struct Person {
     let biography: String
     
     static func getPerson() -> Person {
-        let person = Person(
+        Person(
             name: "Vitaliy",
             surname: "Sabin",
             
@@ -45,7 +41,5 @@ struct Person {
             
             biography: "Родился в Ярославле. Вырос и закончил школу в г. Кирове Калужской области. Учился в медицинском университете в Ярославле, получил специальность анестезиология-реаниматология. Сейчас живу и работаю в Калуге. Увлекаюсь настольными играми, их столько, что уже хранить негде. Заядлый болельщик. Слежу в футболе и баскетболе за Зенитом, в хоккее - за Авангардом. Также интересует барная культура. Люблю дома и для друзей миксовать коктейли."
         )
-        
-        return person
     }
 }

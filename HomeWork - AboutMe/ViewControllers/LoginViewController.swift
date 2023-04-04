@@ -9,10 +9,12 @@ import UIKit
 
 final class LoginViewController: UIViewController {
 
+    private let user = User.getUser()
+    private let person = Person.getPerson()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
 
 }
-
