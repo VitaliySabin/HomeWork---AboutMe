@@ -22,11 +22,19 @@ class AboutMeViewController: UIViewController {
     
     var person: Person!
     
+    override func viewWillLayoutSubviews() {
+        photo.layer.cornerRadius = photo.frame.height / 2
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = person.name + " " + person.surname
-        
+        photo.image = UIImage(named: person.photo)
+        updateLabels()
+    }
+    
+    private func updateLabels() {
         homeTownLabel.text = "Home town: " + person.homeTown
         birthDateLabel.text = "Date of birth: " + person.dateOfBirth
         

@@ -167,7 +167,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IMK-4t-ze4">
                                 <rect key="frame" x="105" y="92.5" width="110" height="110"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="IMK-4t-ze4" secondAttribute="height" multiplier="1:1" id="YFZ-Y9-3vM"/>
+                                    <constraint firstAttribute="width" secondItem="IMK-4t-ze4" secondAttribute="height" multiplier="1:1" id="vx0-1D-nEZ"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="vVE-8T-LTN">
@@ -210,11 +210,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="IMK-4t-ze4" firstAttribute="centerX" secondItem="lXE-rE-cgh" secondAttribute="centerX" id="4yc-TY-uoa"/>
-                            <constraint firstItem="IMK-4t-ze4" firstAttribute="width" secondItem="lXE-rE-cgh" secondAttribute="width" multiplier="0.34375" id="Cz9-ht-iz2"/>
                             <constraint firstItem="vVE-8T-LTN" firstAttribute="top" secondItem="IMK-4t-ze4" secondAttribute="bottom" constant="16" id="WS7-p1-Z3y"/>
                             <constraint firstItem="vVE-8T-LTN" firstAttribute="leading" secondItem="cSt-lh-NKr" secondAttribute="leading" constant="20" id="h2C-gy-aK5"/>
                             <constraint firstItem="IMK-4t-ze4" firstAttribute="top" secondItem="cSt-lh-NKr" secondAttribute="top" id="j0i-eg-OfR"/>
                             <constraint firstItem="cSt-lh-NKr" firstAttribute="trailing" secondItem="vVE-8T-LTN" secondAttribute="trailing" constant="20" id="pVs-jI-cAA"/>
+                            <constraint firstItem="IMK-4t-ze4" firstAttribute="height" secondItem="lXE-rE-cgh" secondAttribute="height" multiplier="0.193662" id="vYB-1K-8sY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Name Surname" id="4Bi-cn-w9q">
