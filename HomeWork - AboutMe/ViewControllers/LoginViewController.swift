@@ -8,7 +8,7 @@
 import UIKit
 
 final class LoginViewController: UIViewController {
-
+    
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
@@ -24,22 +24,26 @@ final class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let tabBarController = segue.destination
+                as? UITabBarController else { return }
         guard let viewControllers = tabBarController.viewControllers else { return }
         
         viewControllers.forEach { viewController in
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.user = user
                 welcomeVC.person = person
-            } else if let navigationVC = viewController as? UINavigationController {
-                guard let aboutMeVC = navigationVC.topViewController as? AboutMeViewController else { return }
+            } else if let navigationVC = viewController
+                        as? UINavigationController {
+                guard let aboutMeVC = navigationVC.topViewController
+                        as? AboutMeViewController else { return }
                 aboutMeVC.person = person
             }
         }
     }
     
     @IBAction func logInButtonPressed() {
-        guard usernameTextField.text == user.username, passwordTextField.text == user.password else {
+        guard usernameTextField.text == user.username,
+              passwordTextField.text == user.password else {
             showAlert(
                 title: "Invalid login or password!",
                 message: "Please, try again!",
@@ -52,8 +56,8 @@ final class LoginViewController: UIViewController {
     
     @IBAction func remindUserData(_ sender: UIButton) {
         sender.tag == 0
-            ? showAlert(title: "Ooops!", message: "Your login is \(user.username).")
-            : showAlert(title: "Ooops!", message: "Your password is \(user.password).")
+        ? showAlert(title: "Ooops!", message: "Your login is \(user.username).")
+        : showAlert(title: "Ooops!", message: "Your password is \(user.password).")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -65,7 +69,11 @@ final class LoginViewController: UIViewController {
 // MARK: - AlertController
 
 extension LoginViewController {
-    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
+    private func showAlert(
+        title: String,
+        message: String,
+        textField: UITextField? = nil
+    ) {
         let alert = UIAlertController(
             title: title,
             message: message,
