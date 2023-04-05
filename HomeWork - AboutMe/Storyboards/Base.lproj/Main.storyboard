@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,18 +25,24 @@
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="pTS-ni-Sk3"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mDk-tc-YF8">
                                         <rect key="frame" x="0.0" y="58" width="256" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="KbK-he-Yrh"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpp-vT-Laz">
                                         <rect key="frame" x="0.0" y="116" width="256" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Log In" cornerStyle="large"/>
                                         <connections>
-                                            <segue destination="xyp-44-31K" kind="presentation" modalPresentationStyle="fullScreen" id="0GZ-76-0AW"/>
+                                            <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="ltZ-4n-cnk"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -46,13 +53,19 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot username?">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="remindUserData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MUh-iV-VN2"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1d-Nb-OyP">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1d-Nb-OyP">
                                 <rect key="frame" x="164.5" y="302" width="139.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot password?">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="remindUserData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kpe-Ro-L1S"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -68,15 +81,20 @@
                             <constraint firstItem="rjb-1H-RqO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="nsr-D6-3Bn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="mDk-tc-YF8" id="62C-do-U9U"/>
+                        <outlet property="usernameTextField" destination="xN2-oh-adJ" id="fWG-iX-rh1"/>
+                        <segue destination="xyp-44-31K" kind="presentation" identifier="goToWelcomeVC" modalPresentationStyle="fullScreen" id="EqR-cG-huS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="398" y="11"/>
+            <point key="canvasLocation" x="388" y="11"/>
         </scene>
         <!--Hola!-->
         <scene sceneID="wpe-cd-S7h">
             <objects>
-                <viewController id="AXZ-ky-ixm" sceneMemberID="viewController">
+                <viewController id="AXZ-ky-ixm" customClass="WelcomeViewController" customModule="HomeWork___AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yvb-2r-Vo1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,7 +140,13 @@
                             <constraint firstItem="Pdw-X3-apM" firstAttribute="width" secondItem="Yvb-2r-Vo1" secondAttribute="width" multiplier="0.265625" id="tIm-80-LPp"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Hola!" id="RWt-rl-SaO"/>
+                    <tabBarItem key="tabBarItem" title="Hola!" id="RWt-rl-SaO">
+                        <imageReference key="selectedImage" image="door.left.hand.open" catalog="system" symbolScale="medium"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="nameLabel" destination="9rd-Dh-Iyg" id="jom-H5-6IF"/>
+                        <outlet property="welcomeLabel" destination="gwn-jF-rjw" id="Uuo-fW-EwJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1g-1C-cTJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -131,7 +155,7 @@
         <!--Name Surname-->
         <scene sceneID="UXh-tl-Ztf">
             <objects>
-                <viewController id="jST-k9-krg" sceneMemberID="viewController">
+                <viewController id="jST-k9-krg" customClass="AboutMeViewController" customModule="HomeWork___AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lXE-rE-cgh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,7 +248,7 @@
         <scene sceneID="lmh-Ic-uLP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pi9-IP-tfA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About me" id="htL-L7-YO9"/>
+                    <tabBarItem key="tabBarItem" title="About me" selectedImage="face.smiling" catalog="system" id="htL-L7-YO9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Gmb-lw-W2Q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
@@ -239,10 +263,10 @@
             </objects>
             <point key="canvasLocation" x="1950" y="411.97183098591552"/>
         </scene>
-        <!--View Controller-->
+        <!--Bio View Controller-->
         <scene sceneID="ltM-mS-dTl">
             <objects>
-                <viewController id="R8h-b1-NoA" sceneMemberID="viewController">
+                <viewController id="R8h-b1-NoA" customClass="BioViewController" customModule="HomeWork___AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QnV-cN-AaZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -271,6 +295,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="door.left.hand.open" catalog="system" width="108" height="128"/>
+        <image name="face.smiling" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
