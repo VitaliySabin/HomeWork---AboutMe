@@ -144,7 +144,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Hola!" id="RWt-rl-SaO">
-                        <imageReference key="selectedImage" image="hand.wave" catalog="system" symbolScale="medium"/>
+                        <imageReference key="image" image="hand.wave" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="nameLabel" destination="9rd-Dh-Iyg" id="jom-H5-6IF"/>
@@ -173,31 +173,31 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="vVE-8T-LTN">
                                 <rect key="frame" x="20" y="234.5" width="280" height="276"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home town" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fDM-uY-pw0">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home town" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="fDM-uY-pw0">
                                         <rect key="frame" x="0.0" y="0.0" width="148" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dcy-H0-OE7">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="Dcy-H0-OE7">
                                         <rect key="frame" x="0.0" y="60" width="160" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Occupation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CjH-GL-4cQ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Occupation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="CjH-GL-4cQ">
                                         <rect key="frame" x="0.0" y="120" width="150.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speciality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AOf-Ox-eDe">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speciality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="AOf-Ox-eDe">
                                         <rect key="frame" x="0.0" y="180" width="126" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="University" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VdF-CI-G2b">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="University" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="VdF-CI-G2b">
                                         <rect key="frame" x="0.0" y="240" width="129.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
@@ -224,10 +224,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="birthDateLabel" destination="Dcy-H0-OE7" id="hx5-W4-bHZ"/>
+                        <outlet property="homeTownLabel" destination="fDM-uY-pw0" id="3Hu-4i-w3B"/>
+                        <outlet property="occupationLabel" destination="CjH-GL-4cQ" id="58b-oS-hyB"/>
+                        <outlet property="photo" destination="IMK-4t-ze4" id="7JV-p9-Voy"/>
+                        <outlet property="specialityLabel" destination="AOf-Ox-eDe" id="k2m-hb-AS4"/>
+                        <outlet property="universityLabel" destination="VdF-CI-G2b" id="vUB-mS-uAw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o7C-tW-jef" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2692.5" y="411.97183098591552"/>
+            <point key="canvasLocation" x="2728" y="412"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2mW-ka-bWe">
@@ -252,7 +260,9 @@
         <scene sceneID="lmh-Ic-uLP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pi9-IP-tfA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About me" selectedImage="face.smiling" catalog="system" id="htL-L7-YO9"/>
+                    <tabBarItem key="tabBarItem" title="About me" id="htL-L7-YO9">
+                        <imageReference key="image" image="face.smiling" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Gmb-lw-W2Q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
