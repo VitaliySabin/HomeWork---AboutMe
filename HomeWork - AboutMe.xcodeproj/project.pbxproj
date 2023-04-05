@@ -11,6 +11,8 @@
 		68A4521629DD784A00EFCC48 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A4521529DD784A00EFCC48 /* WelcomeViewController.swift */; };
 		68A4521829DD78AC00EFCC48 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A4521729DD78AC00EFCC48 /* AboutMeViewController.swift */; };
 		68A4521A29DD78BD00EFCC48 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A4521929DD78BD00EFCC48 /* BioViewController.swift */; };
+		68A4521E29DDDE0D00EFCC48 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A4521D29DDDE0D00EFCC48 /* TabBarViewController.swift */; };
+		68A4522129DDE01A00EFCC48 /* Extension - UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A4522029DDE01A00EFCC48 /* Extension - UIView.swift */; };
 		68DDEFD129DBF4DB00E107BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DDEFD029DBF4DB00E107BB /* AppDelegate.swift */; };
 		68DDEFD329DBF4DB00E107BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DDEFD229DBF4DB00E107BB /* SceneDelegate.swift */; };
 		68DDEFD529DBF4DB00E107BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DDEFD429DBF4DB00E107BB /* LoginViewController.swift */; };
@@ -24,6 +26,8 @@
 		68A4521529DD784A00EFCC48 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		68A4521729DD78AC00EFCC48 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		68A4521929DD78BD00EFCC48 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
+		68A4521D29DDDE0D00EFCC48 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		68A4522029DDE01A00EFCC48 /* Extension - UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension - UIView.swift"; sourceTree = "<group>"; };
 		68DDEFCD29DBF4DB00E107BB /* HomeWork - AboutMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HomeWork - AboutMe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68DDEFD029DBF4DB00E107BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68DDEFD229DBF4DB00E107BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68A4521F29DDDFA500EFCC48 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				68A4522029DDE01A00EFCC48 /* Extension - UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		68DDEFC429DBF4DB00E107BB = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +78,7 @@
 			children = (
 				68DDEFE729DBFA2700E107BB /* Models */,
 				68DDEFE529DBF51600E107BB /* ViewControllers */,
+				68A4521F29DDDFA500EFCC48 /* Extensions */,
 				68DDEFE629DBF52D00E107BB /* Storyboards */,
 				68DDEFE429DBF50B00E107BB /* App */,
 				68DDEFD929DBF4DD00E107BB /* Assets.xcassets */,
@@ -90,6 +103,7 @@
 				68A4521529DD784A00EFCC48 /* WelcomeViewController.swift */,
 				68A4521729DD78AC00EFCC48 /* AboutMeViewController.swift */,
 				68A4521929DD78BD00EFCC48 /* BioViewController.swift */,
+				68A4521D29DDDE0D00EFCC48 /* TabBarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -182,8 +196,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68A4521E29DDDE0D00EFCC48 /* TabBarViewController.swift in Sources */,
 				68A4521A29DD78BD00EFCC48 /* BioViewController.swift in Sources */,
 				68DDEFD529DBF4DB00E107BB /* LoginViewController.swift in Sources */,
+				68A4522129DDE01A00EFCC48 /* Extension - UIView.swift in Sources */,
 				68A4521629DD784A00EFCC48 /* WelcomeViewController.swift in Sources */,
 				68DDEFD129DBF4DB00E107BB /* AppDelegate.swift in Sources */,
 				686817E729DC804B005272C2 /* Person.swift in Sources */,

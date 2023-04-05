@@ -22,6 +22,7 @@ class AboutMeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addVerticalGradientLayer(topColor: .cyan, bottomColor: .blue)
         
         navigationItem.title = person.name + " " + person.surname
         photo.image = UIImage(named: person.photo)
@@ -29,7 +30,8 @@ class AboutMeViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
-        // Не пойму почему не получается круг из ImageView.
+        // Не понимаю, почему не получается круг из ImageView.
+        // Сделал всё тоже самое, как в светофоре
         photo.layer.cornerRadius = photo.frame.width / 2
     }
     

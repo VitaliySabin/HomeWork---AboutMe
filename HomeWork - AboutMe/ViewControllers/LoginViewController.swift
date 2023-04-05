@@ -17,6 +17,7 @@ final class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addVerticalGradientLayer(topColor: .cyan, bottomColor: .blue)
         
         usernameTextField.text = user.username
         passwordTextField.text = user.password
