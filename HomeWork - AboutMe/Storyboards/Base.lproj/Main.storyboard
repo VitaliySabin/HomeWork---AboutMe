@@ -170,34 +170,34 @@
                                     <constraint firstAttribute="width" secondItem="IMK-4t-ze4" secondAttribute="height" multiplier="1:1" id="YFZ-Y9-3vM"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="vVE-8T-LTN">
-                                <rect key="frame" x="20" y="234.5" width="280" height="276"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="vVE-8T-LTN">
+                                <rect key="frame" x="20" y="218.5" width="280" height="276"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home town" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="fDM-uY-pw0">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home town" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fDM-uY-pw0">
                                         <rect key="frame" x="0.0" y="0.0" width="148" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="Dcy-H0-OE7">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dcy-H0-OE7">
                                         <rect key="frame" x="0.0" y="60" width="160" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Occupation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="CjH-GL-4cQ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Occupation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CjH-GL-4cQ">
                                         <rect key="frame" x="0.0" y="120" width="150.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speciality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="AOf-Ox-eDe">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speciality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AOf-Ox-eDe">
                                         <rect key="frame" x="0.0" y="180" width="126" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="University" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="VdF-CI-G2b">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="University" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VdF-CI-G2b">
                                         <rect key="frame" x="0.0" y="240" width="129.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
@@ -211,7 +211,7 @@
                         <constraints>
                             <constraint firstItem="IMK-4t-ze4" firstAttribute="centerX" secondItem="lXE-rE-cgh" secondAttribute="centerX" id="4yc-TY-uoa"/>
                             <constraint firstItem="IMK-4t-ze4" firstAttribute="width" secondItem="lXE-rE-cgh" secondAttribute="width" multiplier="0.34375" id="Cz9-ht-iz2"/>
-                            <constraint firstItem="vVE-8T-LTN" firstAttribute="top" secondItem="IMK-4t-ze4" secondAttribute="bottom" constant="32" id="WS7-p1-Z3y"/>
+                            <constraint firstItem="vVE-8T-LTN" firstAttribute="top" secondItem="IMK-4t-ze4" secondAttribute="bottom" constant="16" id="WS7-p1-Z3y"/>
                             <constraint firstItem="vVE-8T-LTN" firstAttribute="leading" secondItem="cSt-lh-NKr" secondAttribute="leading" constant="20" id="h2C-gy-aK5"/>
                             <constraint firstItem="IMK-4t-ze4" firstAttribute="top" secondItem="cSt-lh-NKr" secondAttribute="top" id="j0i-eg-OfR"/>
                             <constraint firstItem="cSt-lh-NKr" firstAttribute="trailing" secondItem="vVE-8T-LTN" secondAttribute="trailing" constant="20" id="pVs-jI-cAA"/>
