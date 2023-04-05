@@ -28,11 +28,11 @@ final class LoginViewController: UIViewController {
         
         viewControllers.forEach { viewController in
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.username = user.username
-                welcomeVC.name = person.name
-                welcomeVC.surname = person.surname
-            } else if let aboutMeVC = viewController as? AboutMeViewController {
-                // Передать данные
+                welcomeVC.user = user
+                welcomeVC.person = person
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard let aboutMeVC = navigationVC.topViewController as? AboutMeViewController else { return }
+                aboutMeVC.user = user
             }
         }
     }
