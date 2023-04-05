@@ -126,6 +126,9 @@
                                 <rect key="frame" x="117.5" y="421.5" width="85" height="34.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Log Out" cornerStyle="large"/>
+                                <connections>
+                                    <segue destination="wJO-jm-LOG" kind="unwind" unwindAction="unwindFor:" id="DKQ-Di-mJU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FU3-0w-aJf"/>
@@ -141,7 +144,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Hola!" id="RWt-rl-SaO">
-                        <imageReference key="selectedImage" image="door.left.hand.open" catalog="system" symbolScale="medium"/>
+                        <imageReference key="selectedImage" image="hand.wave" catalog="system" symbolScale="medium"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="nameLabel" destination="9rd-Dh-Iyg" id="jom-H5-6IF"/>
@@ -149,6 +152,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1g-1C-cTJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="wJO-jm-LOG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1950" y="-365"/>
         </scene>
@@ -295,8 +299,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="door.left.hand.open" catalog="system" width="108" height="128"/>
         <image name="face.smiling" catalog="system" width="128" height="123"/>
+        <image name="hand.wave" catalog="system" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
