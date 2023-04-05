@@ -285,8 +285,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yAA-9N-TAs">
-                                <rect key="frame" x="20" y="112.5" width="280" height="386.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yAA-9N-TAs">
+                                <rect key="frame" x="20" y="92.5" width="280" height="406.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -297,11 +297,14 @@
                         <constraints>
                             <constraint firstItem="HcD-cb-IzM" firstAttribute="trailing" secondItem="yAA-9N-TAs" secondAttribute="trailing" constant="20" id="6uF-7r-yKA"/>
                             <constraint firstItem="HcD-cb-IzM" firstAttribute="bottom" secondItem="yAA-9N-TAs" secondAttribute="bottom" constant="20" id="CoY-vu-Y1G"/>
-                            <constraint firstItem="yAA-9N-TAs" firstAttribute="top" secondItem="HcD-cb-IzM" secondAttribute="top" constant="20" id="a5R-t0-WhP"/>
+                            <constraint firstItem="yAA-9N-TAs" firstAttribute="top" secondItem="HcD-cb-IzM" secondAttribute="top" id="a5R-t0-WhP"/>
                             <constraint firstItem="yAA-9N-TAs" firstAttribute="leading" secondItem="HcD-cb-IzM" secondAttribute="leading" constant="20" id="ibO-o2-SMV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GMr-zi-uaL"/>
+                    <connections>
+                        <outlet property="biographyLabel" destination="yAA-9N-TAs" id="KuM-Q7-qVn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iqf-hD-Ghe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

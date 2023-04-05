@@ -8,7 +8,7 @@
 import UIKit
 
 class AboutMeViewController: UIViewController {
-
+    
     @IBOutlet var homeTownLabel: UILabel!
     @IBOutlet var birthDateLabel: UILabel!
     
@@ -16,15 +16,9 @@ class AboutMeViewController: UIViewController {
     @IBOutlet var specialityLabel: UILabel!
     @IBOutlet var universityLabel: UILabel!
     
-    
     @IBOutlet var photo: UIImageView!
     
-    
     var person: Person!
-    
-    override func viewWillLayoutSubviews() {
-        photo.layer.cornerRadius = photo.frame.height / 2
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +26,16 @@ class AboutMeViewController: UIViewController {
         navigationItem.title = person.name + " " + person.surname
         photo.image = UIImage(named: person.photo)
         updateLabels()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        // Не пойму почему не получается круг из ImageView.
+        photo.layer.cornerRadius = photo.frame.width / 2
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let bioVC = segue.destination as? BioViewController else { return }
+        bioVC.person = person
     }
     
     private func updateLabels() {

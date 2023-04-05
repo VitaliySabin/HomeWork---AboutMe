@@ -9,9 +9,13 @@ import UIKit
 
 class BioViewController: UIViewController {
 
+    @IBOutlet var biographyLabel: UILabel!
+    
     var person: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        biographyLabel.text = person.biography
     }
 }
