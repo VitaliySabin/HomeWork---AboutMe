@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AboutMeViewController: UIViewController {
+final class AboutMeViewController: UIViewController {
     
     @IBOutlet var homeTownLabel: UILabel!
     @IBOutlet var birthDateLabel: UILabel!
